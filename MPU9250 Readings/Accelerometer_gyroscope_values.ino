@@ -110,6 +110,7 @@ void loop() {
   time_delay = end_time - start_time;
   count++;
   if(count==50){
+    //Sending data is in the format of {Accel X: 0.004121  Accel Y: -0.071851  Accel Z: 9.812561  Deg X: 0.01  Deg Y: 0.01  Deg Z: 0.02}
     Serial.print("Accel X: "); Serial.print(ax_mss, 6); Serial.print("\t");
     Serial.print("Accel Y: "); Serial.print(ay_mss, 6); Serial.print("\t");
     Serial.print("Accel Z: "); Serial.print(az_mss, 6); Serial.print("\t");
