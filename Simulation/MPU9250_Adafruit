@@ -1,0 +1,36 @@
+#include <Wire.h>
+#include <Adafruit_MPU6050.h>
+#include <Adafruit_Sensor.h>
+Adafruit_MPU6050 mpu;
+
+void setup() {
+  // Start I2C communication
+  Wire.begin();
+  Serial.begin(115200);
+}
+
+void loop() {
+  sensors_event_t a, g, temp;
+  mpu.getEvent(&a, &g, &temp);
+
+  // Convert accelerometer data to m/s²
+  float ax = a.acceleration.x;
+  float ay = a.acceleration.y;
+  float az = a.acceleration.z;
+
+  // Convert gyroscope data to °/s
+  float gx = g.gyro.x;
+  float gy = g.gyro.y;
+  float gz = g.gyro.z;
+
+  // Display the readings
+  Serial.print("Accel X: "); Serial.print(ax, 6); Serial.print(" m/s²\t");
+  Serial.print("Accel Y: "); Serial.print(ay, 6); Serial.print(" m/s²\t");
+  Serial.print("Accel Z: "); Serial.print(az, 6); Serial.print(" m/s²\t");
+  Serial.print("Gyro X: "); Serial.print(gx, 6); Serial.print(" °/s\t");
+  Serial.print("Gyro Y: "); Serial.print(gy, 6); Serial.print(" °/s\t");
+  Serial.print("Gyro Z: "); Serial.print(gz, 6); Serial.print(" °/s\t");
+  Serial.println("");
+
+  delay(500);
+}
