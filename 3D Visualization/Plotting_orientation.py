@@ -1,3 +1,4 @@
+# Run code in python and get the real-time orientation visualization in matplotlib
 import serial
 import matplotlib.pyplot as plt
 import numpy as np
