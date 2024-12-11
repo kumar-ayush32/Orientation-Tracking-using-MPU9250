@@ -1,3 +1,4 @@
+// Send data to laptop using USB via Serial
 // Accelerometer reading is in (m/s^2)
 // Gyroscope reading is in (degree/s) but we integrated it about time and get the result in ° (degree) from initial state.
 #include <Wire.h>
