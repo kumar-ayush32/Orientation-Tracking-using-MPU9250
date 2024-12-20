@@ -13,29 +13,26 @@ In this project, I:
 3. Wrote a Python code to process the sensor data and plot its orientation in real time.
 
 ### Software tools
-Arduino IDE: Used for writing, compiling, and uploading code to the ESP32.
+#### Arduino IDE: Used for writing, compiling, and uploading code to the ESP32.
 
-Features include a library manager for installing sensor-specific libraries like MPU9250.
+#### Python Environment: Python code processes the data sent by the ESP32.
 
-Python Environment: Python code processes the data sent by the ESP32.
+#### Key libraries: 
 
-Key libraries: 
+  1. Serial: Facilitates serial communication between ESP32 and the Python script.
 
-Serial: Facilitates serial communication between ESP32 and the Python script.
+  2. NumPy: Handles numerical operations, such as parsing sensor data.
 
-NumPy: Handles numerical operations, such as parsing sensor data.
+  3. Matplotlib: Visualizes orientation data in a 3D plot.
 
-Matplotlib: Visualizes orientation data in a 3D plot.
+#### Real-Time Plotting:
 
-Real-Time Plotting:
-
-Matplotlib’s 3D plotting capabilities help visualize real-time orientation.
-
-Quiver plots dynamically display the acceleration vector.
+Matplotlib’s 3D plotting capabilities help visualize real-time orientation. Quiver plots dynamically display the acceleration vector.
 
 Select the correct board (Tools > Board > ESP32 Dev Module) and port (Tools > Port > COMx)
 
 Open the Serial Monitor (Tools > Serial Monitor) and set the baud rate to 115200. You should see accelerometer and gyroscope data being printed.
+
 ### Hardware Circuit
 ![Circuit](https://github.com/user-attachments/assets/c761e26e-3715-48a0-96f6-a026a0ee8613)
 ### Data send to Laptop
@@ -50,6 +47,8 @@ Open the Serial Monitor (Tools > Serial Monitor) and set the baud rate to 115200
 ## How to run the code
 Download the arudino ide and run the files.
 
-For simulation:  pip install serial matplotlib numpy
-
+For simulation:
+```bash
+pip install serial matplotlib numpy
+```
 Then you are good to go
